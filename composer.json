@@ -1,0 +1,34 @@
+{
+  "name": "omerfdmrl/flarum-code-editor",
+  "description": "Flarum Code Editor",
+  "keywords": [
+    "flarum"
+  ],
+  "type": "flarum-extension",
+  "license": "MIT",
+  "require": {
+    "flarum/core": "^1.4"
+  },
+  "authors": [
+    {
+      "name": "Omer Faruk Demirel",
+      "email": "omerfdmrl@gmail.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Omerfdmrl\\CodeEditor\\": "src/"
+    }
+  },
+  "extra": {
+    "flarum-extension": {
+      "title": "CodeEditor",
+      "icon": {
+        "name": "fas fa-code",
+        "backgroundColor": "#684ba6",
+        "color": "#fff"
+      }
+    }
+  }
+}
