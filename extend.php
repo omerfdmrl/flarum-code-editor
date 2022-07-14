@@ -12,6 +12,8 @@
 namespace Omerfdmrl\CodeEditor;
 
 use Flarum\Extend;
+use Flarum\Foundation\Application;
+use Flarum\User\User;
 
 return [
     (new Extend\Frontend('forum'))
@@ -20,5 +22,11 @@ return [
     (new Extend\Frontend('admin'))
         ->js(__DIR__.'/js/dist/admin.js')
         ->css(__DIR__.'/resources/less/admin.less'),
-    new Extend\Locales(__DIR__ . '/resources/locale')
+    new Extend\Locales(__DIR__ . '/resources/locale'),
+    (new Extend\Model(User::class))
+    ->belongsTo('code_editors',CodeEditor::class),
+
+    // function (Application $application){
+    //     $application->register(Providers\CodeEditorAttributes::class);
+    // },
 ];

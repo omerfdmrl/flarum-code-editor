@@ -1,3 +1,5 @@
-app.initializers.add('omerfdmrl/flarum-code-editor', () => {
-  console.log('[omerfdmrl/flarum-code-editor] Hello, forum!');
+import CodeEditor from "./models/CodeEditor";
+
+app.initializers.add('omerfdmrl-codeEditor', () => {
+  app.store.models['omerfdmrl-codeEditor'] = CodeEditor
 });

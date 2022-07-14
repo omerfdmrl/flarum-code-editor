@@ -97,9 +97,47 @@ module.exports =
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./src/forum */ "./src/forum/index.js");
-/* harmony import */ var _src_forum__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_src_forum__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _src_forum__WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _src_forum__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* empty/unused harmony star reexport */
 
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _inheritsLoose; });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  Object(_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return _setPrototypeOf; });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+  return _setPrototypeOf(o, p);
+}
 
 /***/ }),
 
@@ -107,12 +145,69 @@ __webpack_require__.r(__webpack_exports__);
 /*!****************************!*\
   !*** ./src/forum/index.js ***!
   \****************************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _models_CodeEditor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./models/CodeEditor */ "./src/forum/models/CodeEditor.js");
+
+app.initializers.add('omerfdmrl-codeEditor', function () {
+  app.store.models['omerfdmrl-codeEditor'] = _models_CodeEditor__WEBPACK_IMPORTED_MODULE_0__["default"];
+});
+
+/***/ }),
+
+/***/ "./src/forum/models/CodeEditor.js":
+/*!****************************************!*\
+  !*** ./src/forum/models/CodeEditor.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return CodeEditor; });
+/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
+/* harmony import */ var flarum_Model__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flarum/Model */ "flarum/Model");
+/* harmony import */ var flarum_Model__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(flarum_Model__WEBPACK_IMPORTED_MODULE_1__);
+
+
+
+var CodeEditor = /*#__PURE__*/function (_Model) {
+  Object(_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(CodeEditor, _Model);
+
+  function CodeEditor() {
+    var _this;
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = _Model.call.apply(_Model, [this].concat(args)) || this;
+    _this.user_id = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('user_id');
+    _this.title = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('title');
+    _this.slug = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('slug');
+    _this.body = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('body');
+    _this.type = flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a.attribute('type');
+    return _this;
+  }
+
+  return CodeEditor;
+}(flarum_Model__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+
+
+/***/ }),
+
+/***/ "flarum/Model":
+/*!**********************************************!*\
+  !*** external "flarum.core.compat['Model']" ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-app.initializers.add('omerfdmrl/flarum-code-editor', function () {
-  console.log('[omerfdmrl/flarum-code-editor] Hello, forum!');
-});
+module.exports = flarum.core.compat['Model'];
 
 /***/ })
 
