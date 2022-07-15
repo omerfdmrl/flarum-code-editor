@@ -12,8 +12,9 @@
 namespace Omerfdmrl\CodeEditor;
 
 use Flarum\Extend;
-use Flarum\Foundation\Application;
 use Flarum\User\User;
+use Omerfdmrl\CodeEditor\Api\Controller\CodeEditorController;
+use Omerfdmrl\CodeEditor\Providers\CodeEditorServiceProvider;
 
 return [
     (new Extend\Frontend('forum'))
@@ -25,8 +26,8 @@ return [
     new Extend\Locales(__DIR__ . '/resources/locale'),
     (new Extend\Model(User::class))
     ->belongsTo('code_editors',CodeEditor::class),
-
-    // function (Application $application){
-    //     $application->register(Providers\CodeEditorAttributes::class);
-    // },
+    (new Extend\ServiceProvider())
+        ->register(CodeEditorServiceProvider::class),
+    (new Extend\Routes('forum'))
+        ->get('/hello-world', 'omerfdmrl.helloworld',CodeEditorController::class)
 ];
