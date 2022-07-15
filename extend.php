@@ -13,7 +13,7 @@ namespace Omerfdmrl\CodeEditor;
 
 use Flarum\Extend;
 use Flarum\User\User;
-use Omerfdmrl\CodeEditor\Api\Controller\CodeEditorController;
+use Omerfdmrl\CodeEditor\Controller\CodeEditorController;
 use Omerfdmrl\CodeEditor\Providers\CodeEditorServiceProvider;
 
 return [

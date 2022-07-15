@@ -1,6 +1,6 @@
 <?php
 
-namespace Omerfdmrl\CodeEditor\Api\Controller;
+namespace Omerfdmrl\CodeEditor\Controller;
 
 use Laminas\Diactoros\Response\HtmlResponse;
 use Psr\Http\Message\ResponseInterface as Response;
